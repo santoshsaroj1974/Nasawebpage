@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA-IITB | News & Updates</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Top Header Navigation */
+        .top-banner {
+            background-color: #000046;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid #ffcccc;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .top-banner img.logo-left,
+        .top-banner img.logo-right {
+            height: 80px;
+            background: white;
+            padding: 5px;
+            border-radius: 4px;
+        }
+
+        .nav-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 8px 15px;
+            border-radius: 20px;
+            list-style: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-menu li {
+            margin: 0 8px;
+        }
+
+        .nav-menu li a {
+            text-decoration: none;
+            color: #800020;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 6px 12px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu li a:hover,
+        .nav-menu li a.active {
+            background-color: #800020;
+            color: white;
+            border-radius: 15px;
+        }
+
+        .welcome-bar {
+            background-color: #800020;
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Breaking / Latest News Ticker Bar */
+        .ticker-bar {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 9px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 14px;
+        }
+
+        .ticker-label {
+            background-color: #ffcccc;
+            color: #800020;
+            font-weight: 700;
+            padding: 2px 10px;
+            border-radius: 4px;
+            white-space: nowrap;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            color: #1e3a8a;
+            font-size: 26px;
+            margin: 25px 0 20px 0;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #800020;
+            margin: 8px auto 0 auto;
+        }
+
+        /* Category Filter Buttons */
+        .filter-bar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .filter-btn {
+            background: white;
+            color: #1e3a8a;
+            border: 2px solid #1e3a8a;
+            padding: 7px 18px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background-color: #800020;
+            border-color: #800020;
+            color: white;
+        }
+
+        /* News & Updates List */
+        .updates-list {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            margin-bottom: 50px;
+        }
+
+        .update-card {
+            background: white;
+            border-radius: 8px;
+            padding: 24px 28px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            border-left: 5px solid #800020;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .update-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+        }
+
+        .update-card.pinned {
+            border-left: 5px solid #1e3a8a;
+            background-color: #f8fafc;
+        }
+
+        .update-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .update-badges {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .badge {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 3px 10px;
+            border-radius: 12px;
+            letter-spacing: 0.4px;
+        }
+
+        .badge-new {
+            background-color: #800020;
+            color: white;
+        }
+
+        .badge-category {
+            background-color: #e2e8f0;
+            color: #1e3a8a;
+        }
+
+        .update-date {
+            font-size: 13px;
+            color: #657786;
+            font-weight: 600;
+        }
+
+        .update-title {
+            font-size: 19px;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 8px;
+        }
+
+        .update-message {
+            font-size: 15px;
+            color: #444;
+            margin-bottom: 12px;
+        }
+
+        .update-footer {
+            font-size: 13px;
+            color: #800020;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111827;
+            color: #9ca3af;
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .top-banner {
+                justify-content: center;
+                padding: 15px 20px;
+            }
+            .update-card {
+                padding: 18px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <img class="logo-left" src="img/IITBLOGO.JPG" alt="IITB Logo">
+        
+        <ul class="nav-menu">
+             <li><a href="index.html">Home</a></li>
+            <li><a href="members.html">News-Update</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+        </ul>
+
+        <img class="logo-right" src="img/NASA-LOGO.JPG" alt="NASA Logo">
+    </div>
+
+    <div class="welcome-bar">
+        Welcome to NASA (NON-ACADEMIC STAFF ASSOCIATION) - IIT Bombay
+    </div>
+
+    <!-- Latest Ticker -->
+    <div class="ticker-bar">
+        <span class="ticker-label">Latest Update</span>
+        <marquee behavior="scroll" direction="left">
+            Notice: All NASA-IITB members are requested to update their current department and contact details at the NASA Registered Office (Ground Floor, Main Building).
+        </marquee>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <h2 class="section-title">News, Circulars & Updates</h2>
+
+        <!-- Filter Buttons -->
+        <div class="filter-bar">
+            <button class="filter-btn active" onclick="filterUpdates('all', this)">All Updates</button>
+            <button class="filter-btn" onclick="filterUpdates('circulars', this)">Official Circulars</button>
+            <button class="filter-btn" onclick="filterUpdates('welfare', this)">Staff Welfare</button>
+            <button class="filter-btn" onclick="filterUpdates('notices', this)">General Notices</button>
+        </div>
+
+        <!-- Updates List -->
+        <div class="updates-list" id="updatesList">
+
+            <!-- Update 1 (Pinned / Important) -->
+            <div class="update-card pinned" data-category="circulars">
+                <div class="update-header">
+                    <div class="update-badges">
+                        <span class="badge badge-new">Important</span>
+                        <span class="badge badge-category">Official Circular</span>
+                    </div>
+                    <span class="update-date">Date: 27 November 2026</span>
+                </div>
+                <div class="update-title">Membership Directory & Contact Details Updation Drive</div>
+                <p class="update-message">
+                    All non-academic staff members of IIT Bombay are kindly requested to verify and update their current department, designation, and intercom/contact details with the NASA Office to ensure timely communication of association circulars and welfare notices.
+                </p>
+                <div class="update-footer">Issued by: General Secretary, NASA — IIT Bombay</div>
+            </div>
+
+            <!-- Update 2 -->
+            <div class="update-card" data-category="welfare">
+                <div class="update-header">
+                    <div class="update-badges">
+                        <span class="badge badge-new">New</span>
+                        <span class="badge badge-category">Staff Welfare</span>
+                    </div>
+                    <span class="update-date">Date: 20 November 2026</span>
+                </div>
+                <div class="update-title">Welfare & Medical Assistance Guidelines for Members</div>
+                <p class="update-message">
+                    Under the Pillar of Well-being, NASA has streamlined the application process for staff welfare support and medical assistance requests. Application forms are available at the Registered Office on the Ground Floor, Main Building during office hours.
+                </p>
+                <div class="update-footer">Issued by: Executive Committee, NASA — IIT Bombay</div>
+            </div>
+
+            <!-- Update 3 -->
+            <div class="update-card" data-category="notices">
+                <div class="update-header">
+                    <div class="update-badges">
+                        <span class="badge badge-category">General Notice</span>
+                    </div>
+                    <span class="update-date">Date: 12 November 2026</span>
+                </div>
+                <div class="update-title">Invitation for Suggestions & Staff Grievances</div>
+                <p class="update-message">
+                    In alignment with the Pillar of Voice & Visibility, members are encouraged to submit constructive suggestions or service-related feedback in writing at the NASA Office or online through the Contact page for review in the upcoming Executive Committee meeting.
+                </p>
+                <div class="update-footer">Issued by: NASA Office, IIT Bombay</div>
+            </div>
+
+            <!-- Update 4 -->
+            <div class="update-card" data-category="circulars">
+                <div class="update-header">
+                    <div class="update-badges">
+                        <span class="badge badge-category">Official Circular</span>
+                    </div>
+                    <span class="update-date">Date: 02 November 2026</span>
+                </div>
+                <div class="update-title">Revised Rules and Bylaws (2022) Reference Copy Available</div>
+                <p class="update-message">
+                    Members can now view the complete Rules and Bylaws (Revised 2022) along with the Aims, Objectives, and Six Pillars of Purpose directly on the Support Us page of the official NASA-IITB portal.
+                </p>
+                <div class="update-footer">Issued by: Administration Desk, NASA — IIT Bombay</div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Non-Academic Staff Association (NASA), IIT Bombay. All Rights Reserved.</p>
+        <p>Ground Floor, Main Building, IIT Bombay, Powai, Mumbai – 400076</p>
+    </footer>
+
+    <script>
+        function filterUpdates(category, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            document.querySelectorAll('.update-card').forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

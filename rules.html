@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA-IITB | Bylaws & Governance</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Top Header Navigation */
+        .top-banner {
+            background-color: #000046;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid #ffcccc;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .top-banner img.logo-left,
+        .top-banner img.logo-right {
+            height: 80px;
+            background: white;
+            padding: 5px;
+            border-radius: 4px;
+        }
+
+        .nav-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 8px 15px;
+            border-radius: 20px;
+            list-style: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-menu li {
+            margin: 0 8px;
+        }
+
+        .nav-menu li a {
+            text-decoration: none;
+            color: #800020;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 6px 12px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu li a:hover,
+        .nav-menu li a.active {
+            background-color: #800020;
+            color: white;
+            border-radius: 15px;
+        }
+
+        .welcome-bar {
+            background-color: #800020;
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            width: 100%;
+            padding: 14px 18px;
+            font-size: 16px;
+            border: 2px solid #cbd5e1;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            outline: none;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .search-bar:focus {
+            border-color: #1e3a8a;
+            box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.15);
+        }
+
+        /* Bylaw Sections */
+        .bylaw-section {
+            background: white;
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid #1e3a8a;
+        }
+
+        .bylaw-section h2 {
+            color: #1e3a8a;
+            font-size: 22px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f0f4f8;
+        }
+
+        .bylaw-section h4 {
+            color: #800020;
+            font-size: 16px;
+            margin: 15px 0 6px 0;
+        }
+
+        .bylaw-section p {
+            margin-bottom: 10px;
+            color: #374151;
+        }
+
+        .bylaw-list {
+            margin-left: 22px;
+            margin-bottom: 10px;
+            color: #374151;
+        }
+
+        .bylaw-list li {
+            margin-bottom: 6px;
+        }
+
+        .no-results {
+            display: none;
+            text-align: center;
+            padding: 30px;
+            color: #6b7280;
+            font-size: 16px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111827;
+            color: #9ca3af;
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .top-banner {
+                justify-content: center;
+                padding: 15px 20px;
+            }
+            .welcome-bar {
+                font-size: 18px;
+            }
+            .bylaw-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <img class="logo-left" src="img/IITBLOGO.JPG" alt="IITB Logo">
+        
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <img class="logo-right" src="img/NASA-LOGO.JPG" alt="NASA Logo">
+    </div>
+
+    <div class="welcome-bar">
+        Welcome to NASA (NON-ACADEMIC STAFF ASSOCIATION) - IIT Bombay
+    </div>
+
+    <!-- Main Document Content -->
+    <div class="main-container">
+        <main id="content">
+            <input type="text" id="searchInput" class="search-bar" placeholder="Filter rules by keyword (e.g., safety, council, ethics)..." onkeyup="filterContent()">
+
+            <section id="article-1" class="bylaw-section">
+                <h2>Article I: Authority & Mission</h2>
+                <h4>Section 1.1 Statutory Authority</h4>
+                <p>Established under the National Aeronautics and Space Act of 1958 (51 U.S.C. &sect; 20101 et seq.), the National Aeronautics and Space Administration (NASA) operates as an independent agency of the United States Federal Government.</p>
+                
+                <h4>Section 1.2 Core Mandate</h4>
+                <ul class="bylaw-list">
+                    <li>Expand human knowledge of Earth and space phenomena.</li>
+                    <li>Develop, construct, test, and operate aeronautical and space vehicles.</li>
+                    <li>Preserve the role of the United States as a leader in aeronautical and space science and technology.</li>
+                </ul>
+            </section>
+
+            <section id="article-2" class="bylaw-section">
+                <h2>Article II: Governance Structure</h2>
+                <h4>Section 2.1 Executive Leadership</h4>
+                <p>The Administrator serves as the chief executive officer of the agency, appointed by the President with the advice and consent of the Senate. The Deputy Administrator assists in agency-wide management and acts in the Administrator's absence.</p>
+
+                <h4>Section 2.2 Governance Councils</h4>
+                <ul class="bylaw-list">
+                    <li><strong>Executive Council (EC):</strong> Advises the Administrator on strategic direction, policy, and cross-agency priorities.</li>
+                    <li><strong>Agency Program Management Council (APMC):</strong> Oversees program and project life-cycle reviews and technical readiness.</li>
+                    <li><strong>Mission Support Council (MSC):</strong> Governs institutional operations, infrastructure, and workforce policies.</li>
+                </ul>
+            </section>
+
+            <section id="article-3" class="bylaw-section">
+                <h2>Article III: Safety & Mission Assurance</h2>
+                <h4>Section 3.1 Independent Technical Authority</h4>
+                <p>Technical Authority resides independently from programmatic chains of command to ensure unbiased engineering, safety, and health decisions during mission design and execution.</p>
+
+                <h4>Section 3.2 Dissenting Opinion Process</h4>
+                <p>All personnel have the right and obligation to elevate dissenting technical or safety opinions without fear of retaliation until formally resolved by the appropriate Governance Council.</p>
+            </section>
+
+            <section id="article-4" class="bylaw-section">
+                <h2>Article IV: Ethics & Compliance</h2>
+                <h4>Section 4.1 Standards of Conduct</h4>
+                <p>All employees, contractors, and advisory committee members shall adhere to Federal ethics statutes, avoiding conflicts of interest and safeguarding classified or proprietary data.</p>
+
+                <h4>Section 4.2 Space Debris & Planetary Protection</h4>
+                <p>Missions must comply with NASA Procedural Requirements (NPR) regarding orbital debris mitigation and biological contamination controls for solar system bodies.</p>
+            </section>
+
+            <section id="article-5" class="bylaw-section">
+                <h2>Article V: Amendments & Directives</h2>
+                <h4>Section 5.1 Policy Updates</h4>
+                <p>These bylaws and governing directives are reviewed every five years by the Office of the Chief of Staff and may be amended upon formal approval by the Administrator.</p>
+            </section>
+
+            <div id="noResults" class="no-results">
+                No matching bylaws or sections found for your search.
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; Non-Academic Staff Association (NASA), IIT Bombay. All Rights Reserved.</p>
+        <p>Ground Floor, Main Building, IIT Bombay, Powai, Mumbai &ndash; 400076</p>
+    </footer>
+
+    <script>
+        function filterContent() {
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            const sections = document.querySelectorAll('.bylaw-section');
+            let visibleCount = 0;
+
+            sections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    section.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+
+            document.getElementById('noResults').style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+    </script>
+
+</body>
+</html>
