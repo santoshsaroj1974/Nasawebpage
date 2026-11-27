@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA-IITB | Contact Us</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Top Header Navigation */
+        .top-banner {
+            background-color: #000046;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid #ffcccc;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .top-banner img.logo-left,
+        .top-banner img.logo-right {
+            height: 80px;
+            background: white;
+            padding: 5px;
+            border-radius: 4px;
+        }
+
+        .nav-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 8px 15px;
+            border-radius: 20px;
+            list-style: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-menu li {
+            margin: 0 8px;
+        }
+
+        .nav-menu li a {
+            text-decoration: none;
+            color: #800020;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 6px 12px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu li a:hover,
+        .nav-menu li a.active {
+            background-color: #800020;
+            color: white;
+            border-radius: 15px;
+        }
+
+        .welcome-bar {
+            background-color: #800020;
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1150px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            color: #1e3a8a;
+            font-size: 26px;
+            margin: 30px 0 35px 0;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #800020;
+            margin: 8px auto 0 auto;
+        }
+
+        /* Contact Layout Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 30px;
+            margin-bottom: 40px;
+            align-items: start;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+            border-top: 4px solid #1e3a8a;
+        }
+
+        .card h3 {
+            color: #800020;
+            font-size: 20px;
+            margin-bottom: 18px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+            padding-left: 14px;
+            border-left: 3px solid #800020;
+        }
+
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-label {
+            font-weight: 700;
+            color: #1e3a8a;
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        .info-text {
+            font-size: 14px;
+            color: #444;
+        }
+
+        /* Contact Form */
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            font-size: 14px;
+            color: #1e3a8a;
+            margin-bottom: 6px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #333;
+            background-color: #f8fafc;
+            transition: border-color 0.3s ease, background-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #800020;
+            background-color: #ffffff;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 115px;
+        }
+
+        .submit-btn {
+            background-color: #800020;
+            color: white;
+            border: none;
+            padding: 12px 26px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #5e0017;
+        }
+
+        .form-status {
+            display: none;
+            margin-top: 15px;
+            padding: 12px 15px;
+            background-color: #ecfdf5;
+            border-left: 4px solid #059669;
+            color: #065f46;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111827;
+            color: #9ca3af;
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .top-banner {
+                justify-content: center;
+                padding: 15px 20px;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <img class="logo-left" src="img/IITBLOGO.JPG" alt="IITB Logo">
+        
+         <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+
+        <img class="logo-right" src="img/NASA-LOGO.JPG" alt="NASA Logo">
+    </div>
+
+    <div class="welcome-bar">
+        Welcome to NASA (NON-ACADEMIC STAFF ASSOCIATION) - IIT Bombay
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <h2 class="section-title">Contact NASA — IIT Bombay</h2>
+
+        <div class="contact-grid">
+            <!-- Left Column: Official Contact Details -->
+            <div class="card">
+                <h3>Registered Office & Details</h3>
+
+                <div class="info-item">
+                    <div class="info-label">Postal Address</div>
+                    <div class="info-text">
+                        Non-Academic Staff Association (NASA)<br>
+                        Ground Floor, Main Building<br>
+                        IIT Bombay, Powai<br>
+                        Mumbai – 400076, Maharashtra, India
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-label">Registration & Recognition</div>
+                    <div class="info-text">
+                        Registered under Societies Act, 1860 (Regn. No. Bom.F4227)<br>
+                        Recognized by the Board of Governors, IIT Bombay
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-label">Phone / Intercom</div>
+                    <div class="info-text">
+                        Office Phone: +91 (22) 2576-XXXX<br>
+                        IITB Internal Intercom: XXXX
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-label">Email</div>
+                    <div class="info-text">
+                        nasa@iitb.ac.in
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-label">Office Hours</div>
+                    <div class="info-text">
+                        Monday – Friday: 9:30 AM to 5:30 PM<br>
+                        (Closed on Saturdays, Sundays & Institute Holidays)
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Message / Inquiry Form -->
+            <div class="card">
+                <h3>Send Us a Message</h3>
+                <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="empCode">Employee / Staff ID (Optional)</label>
+                        <input type="text" id="empCode" name="empCode" placeholder="Enter your IITB Staff ID">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="department">Department / Section *</label>
+                        <input type="text" id="department" name="department" placeholder="e.g., Administration, Accounts, Library" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">-- Select a Topic --</option>
+                            <option value="membership">Membership Inquiry</option>
+                            <option value="welfare">Staff Welfare & Support</option>
+                            <option value="events">Events & Cultural Programs</option>
+                            <option value="suggestion">Suggestion / Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" placeholder="Write your message, suggestion, or query here..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Message</button>
+
+                    <div class="form-status" id="formStatus">
+                        Thank you for reaching out to NASA-IIT Bombay. Your message has been recorded.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Non-Academic Staff Association (NASA), IIT Bombay. All Rights Reserved.</p>
+        <p>Ground Floor, Main Building, IIT Bombay, Powai, Mumbai – 400076</p>
+    </footer>
+
+    <script>
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            document.getElementById('formStatus').style.display = 'block';
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA - IIT Bombay | Support Us & Bylaws</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Top Header Navigation */
+        .top-banner {
+            background-color: #000046;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid #ffcccc;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .top-banner img.logo-left,
+        .top-banner img.logo-right {
+            height: 80px;
+            background: white;
+            padding: 5px;
+            border-radius: 4px;
+        }
+
+        .nav-menu {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 8px 15px;
+            border-radius: 20px;
+            list-style: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-menu li {
+            margin: 0 8px;
+        }
+
+        .nav-menu li a {
+            text-decoration: none;
+            color: #800020;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 6px 12px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu li a:hover,
+        .nav-menu li a.active {
+            background-color: #800020;
+            color: white;
+            border-radius: 15px;
+        }
+
+        .welcome-bar {
+            background-color: #800020;
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .doc-header {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            border-top: 5px solid #1e3a8a;
+            margin-bottom: 25px;
+        }
+
+        .doc-header h2 {
+            color: #1e3a8a;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .doc-header h3 {
+            color: #800020;
+            margin-top: 15px;
+            font-size: 18px;
+            letter-spacing: 0.5px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 25px;
+            border-left: 5px solid #800020;
+        }
+
+        .card h3 {
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-size: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+
+        .card p {
+            margin-bottom: 12px;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .pillar-item {
+            background: #f8fafc;
+            padding: 18px;
+            border-radius: 6px;
+            border-top: 3px solid #1e3a8a;
+        }
+
+        .pillar-item h4 {
+            color: #800020;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .vision-mission {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .top-banner {
+                justify-content: center;
+                padding: 15px 20px;
+            }
+            .vision-mission {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        footer {
+            background-color: #111827;
+            color: #9ca3af;
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="top-banner">
+        <img class="logo-left" src="img/IITBLOGO.JPG" alt="IIT Bombay Logo">
+        
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+        <img class="logo-right" src="img/NASA-LOGO.JPG" alt="NASA Logo">
+    </header>
+
+    <div class="welcome-bar">
+        Welcome to NASA (NON-ACADEMIC STAFF ASSOCIATION) - IIT Bombay
+    </div>
+
+    <main class="main-container">
+        <div class="doc-header">
+            <h2>NON-ACADEMIC STAFF ASSOCIATION (NASA) — IIT BOMBAY</h2>
+            <p>(Registered under Societies Act, 1860, Regn. No. Bom.F4227)</p>
+            <p>(Recognized by the Board of Governors, IIT Bombay)</p>
+            <h3>RULES AND BYLAWS (REVISED 2022)</h3>
+        </div>
+
+        <div class="card">
+            <h3>1. Name & Registered Office</h3>
+            <p><strong>1.</strong> The name of the Society shall be "Non-Academic Staff Association, IIT Bombay."</p>
+            <p><strong>2.</strong> The term "Association" hereinafter shall refer to the Non-Academic Staff Association, IIT Bombay.</p>
+            <p><strong>Registered Office:</strong> Ground Floor, Main Building, IIT Bombay, Powai, Mumbai – 400076</p>
+        </div>
+
+        <div class="card">
+            <h3>3. Aims and Objectives</h3>
+            <p><strong>3.1</strong> To help promote the professional advancement of members and improve their service conditions and work opportunities, in harmony with the development of the Institute.</p>
+            <p><strong>3.2</strong> To protect the present and future interests and prospects of the members and to work for their welfare.</p>
+            <p><strong>3.3</strong> To maintain a cooperative, progressive, and creative attitude, and to promote collective thinking in addressing the problems of the members and of the Institute in general.</p>
+            <p><strong>3.4</strong> To strive to help in addressing crises and exigencies arising at the national level by pooling the cooperation of the members.</p>
+            <p><strong>3.5</strong> To cooperate with and affiliate to like-minded associations and organizations of a non-political nature.</p>
+            <p><strong>3.6</strong> To carry out such other activities as may be deemed necessary for the furtherance of the aims and objectives of the Association.</p>
+        </div>
+
+        <div class="card">
+            <h3>NASA Objectives & Goals (Pillars of Purpose)</h3>
+            <div class="pillars-grid">
+                <div class="pillar-item">
+                    <h4>1. The Pillar of Well-being</h4>
+                    <p>We commit to creating an environment where every staff member feels healthy, safe, and supported — through wellness initiatives and caring programs.</p>
+                </div>
+                <div class="pillar-item">
+                    <h4>2. The Pillar of Togetherness</h4>
+                    <p>We bring people closer. By hosting cultural festivals, open forums, and recreational activities, we strengthen the bonds of our vibrant community.</p>
+                </div>
+                <div class="pillar-item">
+                    <h4>3. The Pillar of Voice & Visibility</h4>
+                    <p>Your voice matters. NASA is a platform where every idea, concern, and aspiration find space, respect, and response.</p>
+                </div>
+                <div class="pillar-item">
+                    <h4>4. The Pillar of Recognition</h4>
+                    <p>Celebrating every achievement, big or small — we honour the contributions of our staff, boosting morale and spreading positivity.</p>
+                </div>
+                <div class="pillar-item">
+                    <h4>5. The Pillar of Growth</h4>
+                    <p>We open doors to learning and skill-building opportunities, empowering staff members to grow both personally and professionally.</p>
+                </div>
+                <div class="pillar-item">
+                    <h4>6. The Pillar of Unity & Inclusivity</h4>
+                    <p>Together, we rise. We build a culture of equality and unity, making sure that every member feels they belong to the NASA family.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="vision-mission">
+            <div class="card">
+                <h3>Vision of NASA</h3>
+                <p>To nurture a strong sense of belonging and unity among the staff members of IIT Bombay by promoting well-being, mutual respect, and active participation in community life.</p>
+            </div>
+            <div class="card">
+                <h3>Mission of NASA</h3>
+                <p>To build an inclusive, supportive, and vibrant community where every staff member feels valued, connected, and motivated to contribute towards the shared progress of IIT Bombay, while nurturing a positive and collaborative environment.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Non-Academic Staff Association (NASA), IIT Bombay. All Rights Reserved.</p>
+        <p>Ground Floor, Main Building, IIT Bombay, Powai, Mumbai – 400076</p>
+    </footer>
+
+</body>
+</html>

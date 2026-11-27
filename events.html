@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA-IITB | Events</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Top Header Navigation */
+        .top-banner {
+            background-color: #000046;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid #ffcccc;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .top-banner img.logo-left,
+        .top-banner img.logo-right {
+            height: 80px;
+            background: white;
+            padding: 5px;
+            border-radius: 4px;
+        }
+
+        .nav-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 8px 15px;
+            border-radius: 20px;
+            list-style: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-menu li {
+            margin: 0 8px;
+        }
+
+        .nav-menu li a {
+            text-decoration: none;
+            color: #800020;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 6px 12px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu li a:hover,
+        .nav-menu li a.active {
+            background-color: #800020;
+            color: white;
+            border-radius: 15px;
+        }
+
+        .welcome-bar {
+            background-color: #800020;
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            color: #1e3a8a;
+            font-size: 26px;
+            margin: 30px 0 35px 0;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #800020;
+            margin: 8px auto 0 auto;
+        }
+
+        /* Events Grid */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
+            margin-bottom: 50px;
+        }
+
+        .event-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            border-top: 4px solid #1e3a8a;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .event-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #e2e8f0;
+            display: block;
+        }
+
+        .event-body {
+            padding: 22px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .event-badge {
+            display: inline-block;
+            align-self: flex-start;
+            background-color: #800020;
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            letter-spacing: 0.4px;
+        }
+
+        .event-badge.past {
+            background-color: #1e3a8a;
+        }
+
+        .event-title {
+            font-size: 19px;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 8px;
+        }
+
+        .event-meta {
+            font-size: 13px;
+            color: #657786;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .event-desc {
+            font-size: 14px;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111827;
+            color: #9ca3af;
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .top-banner {
+                justify-content: center;
+                padding: 15px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <img class="logo-left" src="img/IITBLOGO.JPG" alt="IITB Logo">
+        
+       <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+
+        <img class="logo-right" src="img/NASA-LOGO.JPG" alt="NASA Logo">
+    </div>
+
+    <div class="welcome-bar">
+        Welcome to NASA (NON-ACADEMIC STAFF ASSOCIATION) - IIT Bombay
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        
+        <!-- Upcoming Events -->
+        <h2 class="section-title">Upcoming Events</h2>
+
+        <div class="events-grid">
+            <!-- Event 1 -->
+            <div class="event-card">
+                <img class="event-img" src="img/event-placeholder.jpg" alt="Annual General Body Meeting">
+                <div class="event-body">
+                    <span class="event-badge">Upcoming</span>
+                    <div class="event-title">Annual General Body Meeting (AGM)</div>
+                    <div class="event-meta">Date: DD Month 2026 | Venue: Lecture Hall Complex, IITB</div>
+                    <p class="event-desc">Annual gathering of all NASA members to review yearly initiatives, discuss staff welfare measures, and plan upcoming community activities.</p>
+                </div>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="event-card">
+                <img class="event-img" src="img/event-placeholder.jpg" alt="Staff Wellness & Health Camp">
+                <div class="event-body">
+                    <span class="event-badge">Upcoming</span>
+                    <div class="event-title">Staff Wellness & Health Check-up Camp</div>
+                    <div class="event-meta">Date: DD Month 2026 | Venue: Main Building Ground Floor</div>
+                    <p class="event-desc">Comprehensive preventive health screening and wellness consultation organized under the Pillar of Well-being for non-academic staff members.</p>
+                </div>
+            </div>
+
+            <!-- Event 3 -->
+            <div class="event-card">
+                <img class="event-img" src="img/event-placeholder.jpg" alt="Skill Development Workshop">
+                <div class="event-body">
+                    <span class="event-badge">Upcoming</span>
+                    <div class="event-title">Digital Administration & Skill Workshop</div>
+                    <div class="event-meta">Date: DD Month 2026 | Venue: Computer Centre Seminar Room</div>
+                    <p class="event-desc">Hands-on training session designed to empower staff members with modern office productivity and administrative workflow tools.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Past Events -->
+        <h2 class="section-title">Past Events & Highlights</h2>
+
+        <div class="events-grid">
+            <!-- Past Event 1 -->
+            <div class="event-card">
+                <img class="event-img" src="img/event-placeholder.jpg" alt="Annual Cultural Festival">
+                <div class="event-body">
+                    <span class="event-badge past">Completed</span>
+                    <div class="event-title">NASA Annual Cultural & Family Gathering</div>
+                    <div class="event-meta">Venue: Convocation Hall, IIT Bombay</div>
+                    <p class="event-desc">An evening of cultural performances, music, and fellowship celebrating unity and togetherness among IIT Bombay staff and their families.</p>
+                </div>
+            </div>
+
+            <!-- Past Event 2 -->
+            <div class="event-card">
+                <img class="event-img" src="img/event-placeholder.jpg" alt="Staff Felicitation Ceremony">
+                <div class="event-body">
+                    <span class="event-badge past">Completed</span>
+                    <div class="event-title">Long Service & Retirement Felicitation</div>
+                    <div class="event-meta">Venue: Gulmohar Hall, IIT Bombay</div>
+                    <p class="event-desc">Honouring retiring members and recognizing dedicated years of service and contribution to the IIT Bombay community.</p>
+                </div>
+            </div>
+
+            <!-- Past Event 3 -->
+            <div class="event-card">
+                <img class="event-img" src="img/event-placeholder.jpg" alt="Annual Sports Meet">
+                <div class="event-body">
+                    <span class="event-badge past">Completed</span>
+                    <div class="event-title">NASA Inter-Departmental Sports Meet</div>
+                    <div class="event-meta">Venue: Gymkhana Grounds, IIT Bombay</div>
+                    <p class="event-desc">Friendly cricket, badminton, and athletics tournaments promoting fitness, camaraderie, and team spirit across departments.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; Non-Academic Staff Association (NASA), IIT Bombay. All Rights Reserved.</p>
+        <p>Ground Floor, Main Building, IIT Bombay, Powai, Mumbai – 400076</p>
+    </footer>
+
+</body>
+</html>

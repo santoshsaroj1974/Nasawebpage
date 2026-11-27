@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA-IITB | Members</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Top Header Navigation */
+        .top-banner {
+            background-color: #000046;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid #ffcccc;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .top-banner img.logo-left,
+        .top-banner img.logo-right {
+            height: 80px;
+            background: white;
+            padding: 5px;
+            border-radius: 4px;
+        }
+
+        .nav-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 8px 15px;
+            border-radius: 20px;
+            list-style: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-menu li {
+            margin: 0 8px;
+        }
+
+        .nav-menu li a {
+            text-decoration: none;
+            color: #800020;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 6px 12px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu li a:hover,
+        .nav-menu li a.active {
+            background-color: #800020;
+            color: white;
+            border-radius: 15px;
+        }
+
+        .welcome-bar {
+            background-color: #800020;
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            color: #1e3a8a;
+            font-size: 26px;
+            margin: 30px 0 35px 0;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #800020;
+            margin: 8px auto 0 auto;
+        }
+
+        /* Executive Committee / Members Grid */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .member-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            padding: 25px 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #1e3a8a;
+        }
+
+        .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+        }
+
+        .member-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin: 0 auto 15px auto;
+            border: 3px solid #800020;
+            background-color: #f0f4f8;
+            display: block;
+        }
+
+        .member-name {
+            font-size: 17px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .member-role {
+            font-size: 13px;
+            color: #800020;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .member-dept {
+            font-size: 13px;
+            color: #657786;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111827;
+            color: #9ca3af;
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .top-banner {
+                justify-content: center;
+                padding: 15px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <img class="logo-left" src="img/IITBLOGO.JPG" alt="IITB Logo">
+        
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <img class="logo-right" src="img/NASA-LOGO.JPG" alt="NASA Logo">
+    </div>
+
+    <div class="welcome-bar">
+        Welcome to NASA (NON-ACADEMIC STAFF ASSOCIATION) - IIT Bombay
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <h2 class="section-title">NASA Executive Committee Members</h2>
+
+        <div class="team-grid">
+            <!-- Member 1 -->
+            <div class="member-card">
+                <img class="member-img" src="img/SanjayB.png" alt="President">
+                <div class="member-name">Shri.Sanjay H Bhosale</div>
+                <div class="member-role">President</div>
+                <div class="member-dept">Dept. of Mechanical Engg.</div>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="member-card">
+                <img class="member-img" src="img/Ganesh_Adane.jpeg" alt="Vice President">
+                <div class="member-name">Shri.Ganesh T Adane</div>
+                <div class="member-role">Secretary</div>
+                <div class="member-dept">Dept. of Civil Engg.</div>
+            </div>
+
+            <!-- Member 3 -->
+            <div class="member-card">
+                <img class="member-img" src="img/Nilesh Marle.jpeg" alt="General Secretary">
+                <div class="member-name">Shri.Nilesh R Marle</div>
+                <div class="member-role">Treasurer</div>
+                <div class="member-dept">Sophisticated Instruments & Facilities</div>
+            </div>
+
+            <!-- Member 4 -->
+            <div class="member-card">
+                <img class="member-img" src="img/VP.png" alt="Joint Secretary">
+                <div class="member-name">Shri. Vishwas Y Prabhale</div>
+                <div class="member-role">Member</div>
+                <div class="member-dept">Estate Office</div>
+            </div>
+
+            <!-- Member 5 -->
+            <div class="member-card">
+                <img class="member-img" src="img/RanjanaC.jpeg" alt="Treasurer">
+                <div class="member-name">Smt.Ranjana M Chandane</div>
+                <div class="member-role">Member</div>
+                <div class="member-dept">Academic Section</div>
+            </div>
+
+            <!-- Member 6 -->
+            <div class="member-card">
+                <img class="member-img" src="img/SanjayK.jpeg" alt="Executive Member">
+                <div class="member-name">Shri.Sanjay R Khairnar</div>
+                <div class="member-role">Member</div>
+                <div class="member-dept">Electrical Maintenance Division</div>
+            </div>
+
+            <!-- Member 7 -->
+            <div class="member-card">
+                <img class="member-img" src="img/AshokK.jpeg" alt="Executive Member">
+                <div class="member-name">Shri.Ashok G Kadam</div>
+                <div class="member-role">Member</div>
+                <div class="member-dept">Material Management Division</div>
+            </div>
+
+            <!-- Member 8 -->
+            <div class="member-card">
+                <img class="member-img" src="img/Anagha.jpeg" alt="Executive Member">
+                <div class="member-name">Smt.Anagha H Bilay</div>
+                <div class="member-role">Member</div>
+                <div class="member-dept">Dept. of Bio-science & Bio-engg.</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Non-Academic Staff Association (NASA), IIT Bombay. All Rights Reserved.</p>
+        <p>Ground Floor, Main Building, IIT Bombay, Powai, Mumbai – 400076</p>
+    </footer>
+
+</body>
+</html>
